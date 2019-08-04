@@ -4,23 +4,19 @@
 html,body{
 	margin: 0;
 	padding:0;
-	top:0;
 	font-family: 'Noto Sans KR', sans-serif;
 	color: white;
-}
-body{
-	height: 100%;
-	min-height: 100%;
 }
 header{
 	background-color: #333745;
 	margin: 0;
 	top: 0;
-	padding:0;
-	height: 5em;
+	height: 4.7em;
 	display: flex;
 	flex-flow: row;
 	align-items: center;
+	position: fixed;
+	width: 100%;
 	overflow: hidden;
 }
 nav ul{
@@ -43,7 +39,7 @@ header nav{
 	color: #fe5f55;
 }
 .title{
-	font-size: 5em;
+	font-size: 4.5em;
 	color: white;
 	font-family: 'Sledge_Regular', sans-serif;
 }
@@ -65,7 +61,7 @@ header nav{
 	position: absolute;
 	z-index: -1;
 	display: block;
-	top: 5px;
+	top: 0;
 	left: 0;
 	border-bottom:12px solid #fe5f55;
 	transform: scaleY(0);
@@ -81,7 +77,7 @@ header nav{
 	position: absolute;
 	z-index: -2;
 	display: block;
-	top: 5px;
+	top: 0;
 	left: 0;
 	opacity: 0;
 	transition: 0.4s;
@@ -94,8 +90,41 @@ header nav{
 	transform: scaleY(1);
 	border-bottom:10px solid #fe5f55;
 }
-
+.jumbatron{
+	background-image: url('./jumbatron_background.jpg');
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	margin:0;
+	margin-top: 4em;
+	width: 100%;
+	height: 75vh;
+	box-sizing: border-box;
+	line-height: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.jumbatron_text{
+	font-size: 5em;
+	font-family: 'Sledge_Regular',sans-serif;
+	text-shadow: 2px 2px 6px #000000;
+}
+.content{
+	margin: 0px;
+	padding: 0em;
+	background-color: red;
+	width: 100%;
+	display: inline-block;
+	top:0;
+	left: 0;
+	height: 20vh;
+	box-sizing: border-box;
+}
 footer{
 	bottom:0;
-	position: relative;
+	color:black;
+	background-color: purple;
+	display: inline-block;
+	width: 100%;
 }
