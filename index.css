@@ -18,7 +18,7 @@ header{
 	position: fixed;
 	width: 100%;
 	overflow: hidden;
-	z-index: 3;
+	z-index: 5;
 }
 nav ul{
 	list-style: none;
@@ -99,35 +99,88 @@ header nav{
 	margin:0;
 	margin-top: 4em;
 	width: 100%;
-	height: 75vh;
-	box-sizing: border-box;
-	line-height: 0px;
+	height: 80vh;
+	text-align: center;
+	position:relative;
 	display: flex;
+	flex-flow: column;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
+}
+.jumbatron_overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position:absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+.above_overlay{
+	z-index: 2;
 }
 .jumbatron_text{
 	font-size: 5em;
 	font-family: 'Sledge_Regular',sans-serif;
 	text-shadow: 2px 2px 6px #000000;
+	z-index: 1;
 }
-.content{
+.jumbatron_button{
+	background-image: linear-gradient(to right,#fe5f55,orange);
+	border: none;
+	padding: 1em;
+	border-radius: 0.2em;
+	color: white;
+	transition: 0.2s ease-in-out;
+}
+.jumbatron_button:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+}
+.offerings{
 	margin: 0px;
 	padding: 0em;
-	background-color: red;
+	background-color: rgb(74, 79, 99);
 	width: 100%;
 	display: inline-block;
-	top:0;
-	left: 0;
-	height: 20vh;
 	box-sizing: border-box;
+	text-align: center
 }
-.footer{
-	bottom:0;
-	color:black;
-	background-color: purple;
-	display: inline-block;
-	width: 100%;
+.offerings_title{
+	display: block;
+	position: relative;
+	text-align: center;
+}
+.offerings_title:after{
+	content: '';
+	width: 110px;
+	height: 4px;
+	border-radius: 2px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	background-image: linear-gradient(to right,#fe5f55,orange);
+}
+.offerings_containers{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+
+}
+.container{
+	margin:0.5em;
+	padding:0.4em;
+	background-color: grey;
+	height: 300px;
+	width: 250px;
+	border-radius: 5px;
+	padding: 0.9em;
+	transition: 0.3s ease-in-out;
+}
+.container:hover{
+	transform: translateY(-10px);
 }
 .hamburger{
 	align-self: center;
@@ -155,8 +208,18 @@ header nav{
 	background-color: rgb(74, 79, 99);
 	transition: 0.2s ease-in-out;
 	display: flex;
+	flex-flow: column;
 	align-items: center;
 	justify-content: center;
+	z-index: 3;
+}
+.mobile_nav_link{
+	text-decoration: none;
+	color: white;
+	font-weight: strong;
+}
+.mobile_nav_item{
+	padding: 0.8em 0;
 }
 .reveal_mobile_menu{
 	right:0;
